@@ -6,9 +6,9 @@ public class EjercicioL2 {
     public static void main(String[] args){
         String ahor1 = " +---+ \n"+
                         " | | \n" +
+                        " | \n" + 
                         " | \n" +
-                        " | \n" +
-                        " | \n" +
+                        " | \n" + 
                         " | \n" +
                         "========= ";
         String ahor2 = " +---+ \n"+
@@ -25,7 +25,7 @@ public class EjercicioL2 {
                         " | \n"+
                         " | \n"+
                         "=========";
-   
+    
         String ahor4 = " +---+ \n"+
                         " | | \n"+
                         " O | \n"+
@@ -33,7 +33,7 @@ public class EjercicioL2 {
                         " | \n"+
                         " | \n"+
                         "=========";
-   
+    
         String ahor5 = " +---+ \n"+
                         " | | \n"+
                         " O | \n"+
@@ -41,7 +41,7 @@ public class EjercicioL2 {
                         " | \n"+
                         " | \n"+
                         "=========";
-   
+    
         String ahor6 = " +---+ \n"+
                         " | | \n"+
                         " O | \n"+
@@ -49,7 +49,7 @@ public class EjercicioL2 {
                         " / | \n"+
                         " | \n"+
                         "=========";
-   
+    
         String ahor7 = " +---+ \n"+
                         " | | \n"+
                         " O | \n"+
@@ -60,7 +60,7 @@ public class EjercicioL2 {
         String [] figuras = {ahor1, ahor2, ahor3,ahor4,ahor5,ahor6,ahor7};
         int contador = 1;
         String letra;
-        String [] palabras = {"programacion", "java", "identacion", "clases",
+        String [] palabras = {"programacion", "java", "identacion", "clases", 
                                 "objetos", "desarrollador", "pruebas"};
         String palSecreta = getPalabraSecreta(palabras);
         char[] pal = new char[palSecreta.length()];
@@ -71,15 +71,14 @@ public class EjercicioL2 {
         mostrarBlancos(palSecreta);
         System.out.println("\n");
 
-
-        while(contador <= 6){          
+        while(contador <= 6){           
             letra = ingreseLetra();
             if (letraEnPalabraSecreta(letra, palSecreta)){
                 mostrarBlancosActualizados(letra, palSecreta, pal);
                 impBlancosActualizados(pal);
                 palabraRef = palabraComp(pal);
                 if(palabraRef.equals(palSecreta))
-                    break;              
+                    break;               
             } else {
                 System.out.println(figuras[contador]);
                 contador = contador +1;
@@ -88,11 +87,10 @@ public class EjercicioL2 {
         if(contador == 6){
             System.out.println("Tu perdiste");
         } else {
-            System.out.println("Tu ganaste perdiendo solo " + contador + " vidas");
+            System.out.println("Tu ganaste perdiendo solo " + (contador - 1) + " vida");
         }
          System.out.println("\n");
     }
-
 
     public static String palabraComp(char[] n){
         String m = "";
@@ -100,7 +98,6 @@ public class EjercicioL2 {
             m += n[i];
         return m;
     }
-
 
     public static String getPalabraSecreta(String [] lasPalabras){
         String palSecreta;
@@ -111,26 +108,33 @@ public class EjercicioL2 {
         return lasPalabras[ind];
     }
 
-
     public static void mostrarBlancos(String palabra){
         for(int i=0; i< palabra.length(); i++)
         System.out.print("_ " );
     }
-
 
     public static String ingreseLetra(){
         String laLetra;
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese letra: ");
         laLetra = sc.next();
-        while(laLetra.length()!= 1){
-			System.out.println("Caracter invalido");
-            System.out.println("Ingrese letra: ");
+        while(laLetra.length()!= 1 && letraEsNumero(laLetra)){
+            System.out.println("Ingrese letra: "); //COMPLETAR PARA VALIDAR CARACTERES PERMITIDOS
             laLetra = sc.next();
         }
         return laLetra;
     }
 
+    public static boolean letraEsNumero(String l){
+        int cont = 0;
+        for(int i = 0; i < l.length(); i++){
+            if(l.charAt(0) <= '0' && '9' >= l.charAt(0))
+                cont++;
+        }
+        if(cont != 0)
+            return true;
+        return false;
+    }
 
     public static boolean letraEnPalabraSecreta(String letra, String palSecreta ){
         int cont = 0;
@@ -142,7 +146,7 @@ public class EjercicioL2 {
             return true;
         return false;
     }
-   
+    
     public static void mostrarBlancosActualizados(String letra, String pSecreta, char[] n){
         System.out.println("PROCESANDO.....");
         for(int i = 0; i < pSecreta.length(); i++){
