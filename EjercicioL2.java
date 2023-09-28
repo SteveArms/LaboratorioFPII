@@ -118,7 +118,7 @@ public class EjercicioL2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese letra: ");
         laLetra = sc.next();
-        while(laLetra.length()!= 1 && letraEsNumero(laLetra)){
+        while(laLetra.length()!= 1 || !letraEsNumero(laLetra)){
             System.out.println("Ingrese letra: "); //COMPLETAR PARA VALIDAR CARACTERES PERMITIDOS
             laLetra = sc.next();
         }
@@ -126,12 +126,8 @@ public class EjercicioL2 {
     }
 
     public static boolean letraEsNumero(String l){
-        int cont = 0;
-        for(int i = 0; i < l.length(); i++){
-            if(l.charAt(0) <= '0' && '9' >= l.charAt(0))
-                cont++;
-        }
-        if(cont != 0)
+        String z = "abcdefghijklmnopqrstuvwxyz";
+        if(z.contains(l))
             return true;
         return false;
     }
