@@ -1,3 +1,6 @@
+//Laboratorio 4: Ordenamiento Naves
+//Autor: Armando Steven Cuno Cahuari
+//Tiempo:
 import java.util.*;
 public class BatallaLab4 {
     public static void main(String[] args){
