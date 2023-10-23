@@ -1,3 +1,6 @@
+//Laboratorio 8
+//Autor: Armando Steven Cuno Cahuari
+//Tiempo: 2 horas
 import java.util.*;
 public class Videojuego5 {
     public static void main(String[] args){
