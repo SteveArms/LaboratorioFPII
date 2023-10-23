@@ -1,14 +1,14 @@
-//Laboratorio 5: Ejercito - Videojuego2
-//Autor: Armando Steven Cuno Cahuari
-//Tiempo:
-public class SoldadosLab5 {
+//Laboratorio 5: Arreglo Bidimensional
+//Autor: Cuno Cahuari Armando Steven
+//Tiempo: 2 horas
+public class Soldado{
     private String nombre;
     private int puntos;
     private int fila;
     private char columna;
     public void setNombre(String n){
         nombre = n;
-    }
+    }   
     public void setPuntos(int p){
         puntos = p;
     }
