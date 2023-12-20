@@ -1,4 +1,4 @@
-    public class Soldado {
+public class Soldado {
         private String nombre;
         private int nivelAtaque;
         private int nivelDefensa;
@@ -10,7 +10,6 @@
         private int posFila;
         private char posCol;
         private char figura;
-        public static int nroSoldados = 0;
         public Soldado(String nom, char fig){
             nombre = nom;
             nivelAtaque = (int)(Math.random() * 5 + 1);
