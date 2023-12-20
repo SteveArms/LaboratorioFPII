@@ -1,4 +1,4 @@
-public class Soldado {
+    public class Soldado {
         private String nombre;
         private int nivelAtaque;
         private int nivelDefensa;
@@ -22,7 +22,6 @@ public class Soldado {
             posFila = (int)(Math.random() * 10 + 1);
             posCol = numCol();
             figura = fig;
-            nroSoldados++;
         }
         public Soldado(String nom, int nivAtaq, int nivDef, int vid, char fig){
             nombre = nom;
@@ -36,7 +35,6 @@ public class Soldado {
             posFila = (int)(Math.random() * 10 + 1);
             posCol = numCol();
             figura = fig;
-            nroSoldados++;
         }
         public Soldado(String nom, int nivAtaq, int nivDef, int nivVida, int nivAct, int vel, String act, boolean vivir, int pFila, char pCol, char fig){
             nombre = nom;
@@ -50,7 +48,6 @@ public class Soldado {
             posFila = pFila;
             posCol = pCol;
             figura = fig;
-            nroSoldados++;
         }
         public String getNombre(){
             return nombre;
@@ -117,7 +114,6 @@ public class Soldado {
         public void morir(){
             vive = false;
             velocidad = 0;
-            nroSoldados--;
         }
         public void avanzar(){
             velocidad++;
@@ -140,3 +136,4 @@ public class Soldado {
             return "Nombre: " + nombre + " Vida:" + vidaActual + " Fila:" + posFila + " Columna:" + posCol + " Actitud:" + actitud;
         }
     }
+
