@@ -21,7 +21,7 @@ public class Soldado {
         velocidad = 0;
         actitud = "Defensiva";
         vive = true;
-        posFila = (int)(Math.random() * 10 + 1);
+        posFila = (int)(Math.random() * CANTMAX + 1);
         posCol = numCol();
         figura = fig;
         cantSoldados++;
@@ -35,7 +35,21 @@ public class Soldado {
         velocidad = 0;
         actitud = "Defensiva";
         vive = true;
-        posFila = (int)(Math.random() * 10 + 1);
+        posFila = (int)(Math.random() * CANTMAX + 1);
+        posCol = numCol();
+        figura = fig;
+        cantSoldados++;
+    }
+    public Soldado(String nom, int nivelVida,char fig){
+        nombre = nom;
+        nivelAtaque = (int)(Math.random() * 5 + 1);
+        nivelDefensa = (int)(Math.random() * 5 + 1);
+        this.nivelVida = nivelVida;
+        vidaActual = nivelVida;
+        velocidad = 0;
+        actitud = "Defensiva";
+        vive = true;
+        posFila = (int)(Math.random() * CANTMAX + 1);
         posCol = numCol();
         figura = fig;
         cantSoldados++;
@@ -51,20 +65,6 @@ public class Soldado {
         vive = vivir;
         posFila = pFila;
         posCol = pCol;
-        figura = fig;
-        cantSoldados++;
-    }
-    public Soldado(String nom, int nivelVida,char fig){
-        nombre = nom;
-        nivelAtaque = (int)(Math.random() * 5 + 1);
-        nivelDefensa = (int)(Math.random() * 5 + 1);
-        this.nivelVida = nivelVida;
-        vidaActual = nivelVida;
-        velocidad = 0;
-        actitud = "Defensiva";
-        vive = true;
-        posFila = (int)(Math.random() * 10 + 1);
-        posCol = numCol();
         figura = fig;
         cantSoldados++;
     }

@@ -407,6 +407,8 @@ public class Practica{
             jugar = sc.next();
             jugar = jugar.toUpperCase();
             i++;
+            System.out.println("Al ejercito 1 le quedan " + ejercito1.size());
+            System.out.println("Al ejercito 2 le quedan " + ejercito2.size());
         }
         if(ejercito1.size() == 0){
             System.out.println("Salio victorio el ejercito 2");
