@@ -155,6 +155,6 @@ public class Soldado {
         return car;
     }
     public String toString(){
-        return "Nombre: " + nombre + " Vida:" + vidaActual + " Fila:" + posFila + " Ataque:" + nivelAtaque + " Defensa:" + nivelDefensa +  " Columna:" + posCol + " Actitud:" + actitud;
+        return "Nombre: " + nombre + " Vida:" + vidaActual + " Fila:" + posFila + " Ataque:" + nivelAtaque + " Defensa:" + nivelDefensa +  " Columna:" + posCol;
     }
 }
