@@ -53,6 +53,10 @@ public class Practica{
                     System.out.println("Metrica Ganador ");
                     metricaGanador(actual, enemigo);
                     break;
+                case 7:
+                    System.out.println("Saliendo del programa");
+                    validez = false;
+                    break;
                 default:
                     System.out.println("Opcion invalida");
 

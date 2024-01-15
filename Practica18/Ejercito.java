@@ -18,13 +18,13 @@ public class Ejercito {
         for(int i = 0; i < nroSoldados; i++){
             int random = (int)(Math.random() * 3 + 1);
             if(random == 1){
-                nombre = (i + 1) + " Caballero " + numero;
+                nombre = (i + 1) + "C" + numero;
                 misSoldados.add(new Caballero(nombre, fig));
             } else if( random == 2){
-                nombre = (i + 1) + " Espadachin " + numero;
+                nombre = (i + 1) + "E" + numero;
                 misSoldados.add(new Espadachin(nombre, fig));
             } else if(random == 3){
-                nombre = (i + 1) + " Arquero" + numero;
+                nombre = (i + 1) + "A" + numero;
                 misSoldados.add(new Arquero(nombre, fig));
             }
         }     
